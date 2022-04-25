@@ -1,0 +1,93 @@
+body {
+  height: 100vh;
+  font-family: "Noto Serif", serif;
+  background-color: burlywood;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a,
+button {
+  font-family: "noto Serif", serif;
+}
+.dropdown {
+  height: 10vh;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+.productos,
+.precios,
+.stock {
+  position: relative;
+}
+.productos ul,
+.precios ul,
+.stock ul {
+  position: absolute;
+  background-color: yellow;
+  margin-top: 10px;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  list-style: none;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: all 0.4s ease;
+}
+
+.dropdown button,
+.home {
+  background: none;
+  border: none;
+  color: white;
+  text-decoration: none;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.dropdown button:hover,
+.home:hover {
+  background-color: cornflowerblue;
+}
+
+.productos li,
+.precios li,
+.stock li {
+  background-color: blue;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.productos li:hover,
+.precios li:hover,
+.stock li:hover {
+  background-color: chartreuse;
+}
+.productos button:focus + ul {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0px);
+}
+.precios button:focus + ul {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0px);
+}
+.stock button:focus + ul {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0px);
+}
